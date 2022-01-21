@@ -51,7 +51,7 @@ cos_new=lambda n:sum([(pow(-1,x)/factorial(2*x))*pow(n,2*x) for x in range(1,101
 tan=lambda x:(sin(x)/cos(x))
 s_integral=lambda x,a,b:(x*b)-(x*a)
 estimate_pi=lambda v=1000:sum([(-1)**n/(2*n+1) for n in range(v+1)])*4
-ln_old=lambda z,a=10001:sum([(-1)**(k+1)*(z-1)**k/k for k in range(1,a)])
+ln_old=lambda z,a=10001:sum([(-1)**(k+1)*(z-1)**k/k for k in range(1,a)]) # 0 < z ≤ 2
 ln=lambda z,a=10001:2*sum([(1/((2*k)+1))*(((z-1)/(z+1))**((2*k)+1)) for k in range(a)])
 log=lambda x,a=None:ln(x) if a is None else ln(x)/ln(a)
 sinh=lambda x:sum([x**((2*n)+1)/factorial(2*n+1) for n in range(1001)])
