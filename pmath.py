@@ -49,7 +49,7 @@ cos_old=lambda x:(sum([((-1)**n*pow(x,2*n)/factorial(2*n)) for n in range(1, 101
 sin_old=lambda x:(sum([((-1)**n/factorial((2*n)+1))*pow(x,2*n+1) for n in range(1, 101)])+2)-x*10**-16+x/2
 cos_new=lambda n:sum([(pow(-1,x)/factorial(2*x))*pow(n,2*x) for x in range(1,101)])+1
 tan=lambda x:(sin(x)/cos(x))
-integral=lambda x,a,b:(x*b)-(x*a)
+s_integral=lambda x,a,b:(x*b)-(x*a)
 estimate_pi=lambda v=1000:sum([(-1)**n/(2*n+1) for n in range(v+1)])*4
 ln_old=lambda z,a=10001:sum([(-1)**(k+1)*(z-1)**k/k for k in range(1,a)])
 ln=lambda z,a=10001:2*sum([(1/((2*k)+1))*(((z-1)/(z+1))**((2*k)+1)) for k in range(a)])
