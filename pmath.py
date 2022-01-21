@@ -45,7 +45,7 @@ def sum(a):
 e=sum([1/factorial(n) for n in range(101)]) #sum([1/factorial(1+n) for n in range(1,101)])+2
 exp=lambda s:e**s
 zeta=lambda s:sum([1/n**s for n in range(1, 10001)])
-cos_old=lambda x:(sum([((-1)**n*(x**(2*n))/factorial(2*n)) for n in range(1, 101)])+1)+x*2e-16
+cos_old=lambda x:(sum([((-1)**n*(x**(2*n))/factorial(2*n)) for n in range(101)]))+x*10**-18
 sin_new=lambda x:sum([((-1)**n/factorial(2*n+1))*(x**((2*n)+1)) for n in range(101)])
 cos_new=lambda n:sum([((-1)**x*(n**(2*x))/factorial(2*x)) for x in range(101)])
 tan=lambda x:(sin(x)/cos(x))
